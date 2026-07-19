@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian Financial Guidance — A Clearer Path to Financial Confidence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F4EE;
+  --bg-deep:#EDE8DF;
+  --navy:#0F2B3C;
+  --navy-soft:#3A5A6A;
+  --mint:#B8DACE;
+  --mint-deep:#9CC8BA;
+  --white:#FFFFFF;
+  --teal:#1A8A7A;
+  --wine:#C4555A;
+  --gold:#E2A84A;
+  --gray:#6B6A66;
+  --line:rgba(15,43,60,0.12);
+  --serif:'DM Serif Display', serif;
+  --sans:'Inter', -apple-system, sans-serif;
+  --mono:'JetBrains Mono', monospace;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:0.01ms!important; transition-duration:0.01ms!important;}
+}
+body{
+  background:var(--bg);
+  color:var(--gray);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit; text-decoration:none;}
+.wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+h1,h2,h3{font-family:var(--serif); color:var(--navy); font-weight:400; line-height:1.08; letter-spacing:-0.02em;}
+h1{font-weight:400;}
+h2{font-weight:400;}
+
+.bg-pattern{
+  position:relative;
+}
+.bg-pattern::before{
+  content:''; position:absolute; inset:0;
+  background-image:radial-gradient(var(--line) 1px, transparent 1px);
+  background-size:28px 28px;
+  pointer-events:none;
+}
+section{padding:96px 0;}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:12.5px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--navy-soft);
+  display:block;
+  margin-bottom:16px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--navy);
+  color:var(--white);
+  font-family:var(--sans);
+  font-weight:600;
+  font-size:15.5px;
+  padding:15px 28px;
+  border-radius:4px;
+  text-decoration:none;
+  border:1px solid var(--navy);
+  cursor:pointer;
+  transition:background .25s, color .25s, transform .15s, box-shadow .25s;
+}
+.btn:hover{background:var(--teal); border-color:var(--teal); transform:translateY(-2px); box-shadow:0 6px 20px -8px rgba(46,139,122,0.35);}
+.btn-outline{
+  background:transparent;
+  color:var(--navy);
+}
+.btn-outline:hover{background:var(--navy); color:var(--white); box-shadow:0 6px 20px -8px rgba(15,59,92,0.3);}
+.btn-nav-cta{
+  background:var(--gold);
+  color:var(--navy);
+  border-color:var(--gold);
+  padding:12px 44px;
+  font-size:14px;
+  font-weight:700;
+  box-shadow:0 4px 14px -6px rgba(224,160,48,0.5);
+}
+.btn-nav-cta:hover{background:var(--teal); border-color:var(--teal); color:var(--white); box-shadow:0 4px 14px -6px rgba(46,139,122,0.5);}
+.btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+  outline:2px solid var(--teal);
+  outline-offset:3px;
+}
+
+/* ===== Header / Nav ===== */
+header{
+  position:sticky; top:0; z-index:50;
+  background:var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 32px;
+  max-width:1180px; margin:0 auto;
+}
+.logo{
+  font-family:var(--serif); font-weight:400; font-size:26px; color:var(--navy);
+  letter-spacing:-0.02em;
+  padding-right:20px;
+}
+.logo span{color:var(--gold); font-size:30px; display:inline-block; margin-left:2px;}
+.nav-links{display:flex; gap:28px; list-style:none; align-items:center;}
+.nav-links a{
+  font-size:15px; color:var(--navy-soft); font-weight:500;
+  padding:6px 0;
+  position:relative;
+  transition:color .25s;
+}
+.nav-links a::after{
+  content:''; position:absolute; bottom:-1px; left:0; width:0; height:2px;
+  background:var(--gold); transition:width .25s;
+}
+.nav-links a:hover::after{width:100%;}
+.nav-links a:hover{color:var(--navy);}
+.nav-links a.btn-nav-cta{padding:12px 44px;}
+.nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:4px; color:var(--navy);}
+.nav-toggle svg{width:28px; height:28px;}
+@media (max-width:860px){
+  .nav-links{
+    position:fixed; top:66px; left:0; right:0;
+    background:var(--bg-deep); flex-direction:column; align-items:stretch;
+    padding:24px 28px; gap:4px; transform:translateY(-120%);
+    transition:transform .35s ease; border-bottom:2px solid var(--gold);
+    box-shadow:0 20px 40px -20px rgba(0,0,0,0.2);
+  }
+  .nav-links.open{transform:translateY(0);}
+  .nav-links a{font-size:17px; display:block; padding:14px 16px; border-radius:6px;}
+  .nav-links a:hover{background:var(--bg);}
+  .nav-links a::after{display:none;}
+  .nav-links .btn-nav-cta{margin-top:8px; text-align:center;}
+  .nav-toggle{display:block;}
+}
+
+/* ===== Hero ===== */
+.hero{
+  padding:120px 0 0;
+  text-align:left;
+  position:relative;
+  overflow:hidden;
+  min-height:85vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:stretch;
+}
+.hero-bg{
+  position:absolute; inset:0; z-index:0;
+  background:url('242b5560-80b6-4069-bade-10346a76515d.png') no-repeat right center / cover;
+}
+.hero-bg::after{
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(247,244,238,0.74) 0%, rgba(247,244,238,0.58) 34%, rgba(247,244,238,0.18) 50%, transparent 66%);
+}
+.hero .wrap{
+  position:relative; z-index:1; width:100%;
+  flex:1; display:flex; align-items:center;
+}
+.hero-content{max-width:560px; text-align:left;}
+.hero h1{font-size:clamp(34px,5vw,58px); margin-bottom:20px;}
+.hero p.lede{font-size:18px; color:var(--navy-soft); max-width:560px; margin:0 0 30px; line-height:1.7;}
+.hero-cta-row{display:flex; align-items:center; justify-content:flex-start; gap:16px; flex-wrap:wrap; margin-bottom:12px;}
+.microcopy{font-size:13px; color:var(--gray); font-family:var(--mono);}
+@media (max-width:860px){
+  .hero{
+    min-height:720px;
+    padding:88px 0 0;
+  }
+  .hero-bg{
+    background-position:82% center;
+  }
+  .hero-bg::after{
+    background:
+      linear-gradient(90deg, rgba(247,244,238,0.74) 0%, rgba(247,244,238,0.56) 56%, rgba(247,244,238,0.12) 78%, transparent 100%),
+      linear-gradient(180deg, rgba(247,244,238,0.04) 0%, rgba(247,244,238,0.28) 100%);
+  }
+  .hero .wrap{
+    align-items:flex-start;
+    padding-top:28px;
+  }
+  .hero-content{
+    max-width:min(420px, 72vw);
+  }
+  .hero h1{font-size:clamp(32px,9vw,46px);}
+  .hero p.lede{font-size:16px; line-height:1.58; margin-bottom:22px;}
+  .hero-cta-row{gap:10px;}
+  .hero-cta-row .btn{padding:13px 18px; font-size:14px;}
+}
+@media (max-width:520px){
+  .hero{
+    min-height:700px;
+    padding-top:82px;
+  }
+  .hero-bg{
+    background-position:88% center;
+  }
+  .hero-bg::after{
+    background:
+      linear-gradient(90deg, rgba(247,244,238,0.76) 0%, rgba(247,244,238,0.58) 62%, rgba(247,244,238,0.12) 88%, transparent 100%),
+      linear-gradient(180deg, rgba(247,244,238,0.04) 0%, rgba(247,244,238,0.3) 100%);
+  }
+  .hero .wrap{padding-top:18px;}
+  .hero-content{max-width:78vw;}
+  .hero h1{font-size:clamp(30px,9.5vw,40px);}
+  .hero p.lede{font-size:15.5px;}
+  .hero-cta-row .btn{padding:12px 16px; font-size:13.5px;}
+  .microcopy{font-size:12px; max-width:280px;}
+}
+
+/* ===== Trust bar ===== */
+.trust-bar{
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  position:relative; z-index:1;
+  width:100%;
+  padding:24px 0; margin-top:80px;
+  background:rgba(233,238,243,0.6);
+  backdrop-filter:blur(6px);
+}
+.trust-row{
+  display:flex; justify-content:center; flex-wrap:wrap; gap:16px 40px;
+}
+.trust-item{
+  display:flex; align-items:center; gap:10px; font-size:14px; color:var(--navy-soft); font-weight:500;
+}
+.trust-item svg{width:18px; height:18px; color:var(--teal); flex-shrink:0;}
+@media (max-width:860px){
+  .trust-bar{
+    margin-top:44px;
+    padding:18px 0;
+    background:var(--bg-deep);
+    backdrop-filter:none;
+  }
+  .trust-row{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:12px;
+  }
+  .trust-item{
+    justify-content:center;
+    font-size:13px;
+    text-align:center;
+  }
+}
+@media (max-width:520px){
+  .trust-row{grid-template-columns:1fr;}
+}
+
+/* ===== Section common ===== */
+.section-head{max-width:640px; margin:0 auto 52px; text-align:center; position:relative;}
+.section-head h2{font-size:clamp(28px,3.4vw,38px);}
+.section-head h2::after{
+  content:''; display:block; width:50px; height:3px;
+  background:var(--gold); border-radius:2px; margin:16px auto 0;
+}
+.section-head p{color:var(--gray); font-size:17px; margin-top:14px;}
+.alt-bg{background:var(--bg-deep);}
+
+.reveal{opacity:0; transform:translateY(20px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+/* ===== Process ===== */
+.process-svg-wrap{width:100%; margin:20px 0 60px;}
+.process-svg-wrap svg{width:100%; height:auto; display:block;}
+.process-steps{
+  display:grid; grid-template-columns:repeat(5,1fr); gap:24px;
+}
+.process-step{padding-top:8px; border-top:2px solid var(--line);}
+.process-step .step-num{font-family:var(--mono); font-size:12.5px; color:var(--navy-soft); letter-spacing:0.08em;}
+.process-step h3{font-size:19px; margin:10px 0 8px;}
+.process-step p{font-size:14.5px; color:var(--gray); line-height:1.55;}
+.process-step:nth-child(1){border-top-color:var(--wine);}
+.process-step:nth-child(5){border-top-color:var(--teal);}
+@media (max-width:860px){.process-steps{grid-template-columns:1fr 1fr;}}
+@media (max-width:520px){.process-steps{grid-template-columns:1fr;}}
+
+/* ===== Services ===== */
+.services-grid{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+  background:var(--line); border:1px solid var(--line);
+  border-radius:12px; overflow:hidden;
+}
+.service-card{
+  background:var(--bg); padding:40px 44px;
+  transition:background .3s, transform .3s;
+  position:relative;
+}
+.service-card::before{
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:var(--teal); opacity:0; transition:opacity .3s;
+}
+.service-card:nth-child(2)::before{background:var(--gold);}
+.service-card:nth-child(3)::before{background:var(--wine);}
+.service-card:nth-child(4)::before{background:var(--navy);}
+.service-card:hover::before{opacity:1;}
+.service-card:hover{background:var(--white);}
+.service-card .icon-wrap{
+  width:48px; height:48px; border-radius:14px;
+  display:flex; align-items:center; justify-content:center; margin-bottom:20px;
+  transition:transform .3s, border-radius .3s;
+}
+.service-card:hover .icon-wrap{border-radius:50%; transform:scale(1.1);}
+.service-card .icon-wrap svg{width:22px; height:22px; color:var(--white);}
+.service-card:nth-child(1) .icon-wrap{background:var(--teal);}
+.service-card:nth-child(2) .icon-wrap{background:var(--gold);}
+.service-card:nth-child(3) .icon-wrap{background:var(--wine);}
+.service-card:nth-child(4) .icon-wrap{background:var(--navy);}
+.service-card h3{font-size:21px; margin-bottom:10px;}
+.service-card p{color:var(--gray); font-size:15px; line-height:1.65;}
+.service-note{
+  margin-top:16px; font-size:12.5px; color:var(--wine); font-family:var(--mono);
+  padding-top:14px; border-top:1px dashed var(--line);
+}
+@media (max-width:760px){.services-grid{grid-template-columns:1fr;}}
+
+/* ===== About ===== */
+.about-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:center;}
+.about-shape{
+  border-radius:8px; aspect-ratio:1/1; background:var(--mint);
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+}
+.about-shape svg{width:70%; height:70%;}
+.about-grid h2{margin-bottom:18px;}
+.about-grid p{color:var(--gray); margin-bottom:16px;}
+.about-stats{display:flex; gap:40px; margin-top:28px; flex-wrap:wrap;}
+.about-stats div .n{font-family:var(--serif); font-size:32px; color:var(--teal);}
+.about-stats div .l{font-size:13px; color:var(--gray);}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
+
+/* ===== Testimonials ===== */
+.testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+.testi-card{
+  background:var(--white); border:1px solid var(--line); border-radius:12px;
+  padding:36px 32px; display:flex; flex-direction:column; gap:16px;
+  transition:transform .3s, box-shadow .3s;
+  position:relative;
+}
+.testi-card::before{
+  content:'"'; position:absolute; top:12px; right:20px;
+  font-family:var(--serif); font-size:56px; line-height:1;
+  color:var(--line); pointer-events:none;
+}
+.testi-card:hover{transform:translateY(-4px); box-shadow:0 16px 40px -18px rgba(15,59,92,0.18);}
+.testi-card p{font-family:var(--serif); font-size:17px; color:var(--navy); line-height:1.55; font-style:italic;}
+.testi-person{display:flex; align-items:center; gap:12px; margin-top:auto;}
+.testi-avatar{
+  width:38px; height:38px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--mono); font-size:13px; font-weight:600; color:var(--white);
+}
+.testi-card:nth-child(1) .testi-avatar{background:var(--teal);}
+.testi-card:nth-child(2) .testi-avatar{background:var(--gold);}
+.testi-card:nth-child(3) .testi-avatar{background:var(--wine);}
+.testi-name{font-size:14px; font-weight:600; color:var(--navy);}
+.testi-loc{font-size:12.5px; color:var(--gray);}
+@media (max-width:860px){.testi-grid{grid-template-columns:1fr;}}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:760px; margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{
+  width:100%; text-align:left; background:none; border:none; cursor:pointer;
+  padding:22px 0; display:flex; justify-content:space-between; align-items:center;
+  font-family:var(--serif); font-size:19px; color:var(--navy); gap:20px;
+}
+.faq-q .plus{font-size:22px; color:var(--gold); transition:transform .25s; flex-shrink:0;}
+.faq-item.open .plus{transform:rotate(45deg);}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+.faq-a p{padding-bottom:22px; color:var(--gray); max-width:600px;}
+
+/* ===== Consultation form ===== */
+.consult{background:var(--navy); color:var(--bg);}
+.consult .section-head h2{color:var(--white);}
+.consult .section-head p{color:rgba(233,238,243,0.75);}
+.consult-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px;}
+.consult-copy .eyebrow{color:var(--mint);}
+.consult-copy ul{list-style:none; margin-top:24px; display:flex; flex-direction:column; gap:14px;}
+.consult-copy li{display:flex; gap:12px; font-size:15px; color:rgba(233,238,243,0.85);}
+.consult-copy li svg{width:18px; height:18px; color:var(--mint); flex-shrink:0; margin-top:2px;}
+.consult-form{
+  background:rgba(233,238,243,0.06); border:1px solid rgba(233,238,243,0.18);
+  border-radius:8px; padding:36px; display:flex; flex-direction:column; gap:18px;
+  transition:opacity .3s;
+}
+.field{display:flex; flex-direction:column; gap:6px;}
+.field label{font-size:13px; font-family:var(--mono); letter-spacing:0.04em; color:rgba(233,238,243,0.7);}
+.field input, .field select{
+  background:rgba(255,255,255,0.95); border:1px solid transparent; border-radius:4px;
+  padding:13px 14px; font-family:var(--sans); font-size:15px; color:var(--navy);
+}
+.field input:focus, .field select:focus{outline:2px solid var(--mint); outline-offset:1px;}
+.consult-form .btn{width:100%; justify-content:center; background:var(--gold); border-color:var(--gold); margin-top:6px;}
+.consult-form .btn:hover{background:var(--teal); border-color:var(--teal);}
+.form-note{font-size:12.5px; color:rgba(233,238,243,0.6); text-align:center;}
+.form-success{display:none; text-align:center; padding:50px 10px;}
+.form-success.show{display:block;}
+.form-success h3{color:var(--white); font-size:24px; margin-bottom:12px;}
+.form-success p{color:rgba(233,238,243,0.75); font-size:15px;}
+@media (max-width:860px){.consult-grid{grid-template-columns:1fr;}}
+
+/* ===== Footer ===== */
+footer{padding:60px 0 36px; border-top:1px solid var(--line);}
+.footer-top{display:flex; justify-content:space-between; gap:48px; flex-wrap:wrap; margin-bottom:44px;}
+.footer-brand p{max-width:320px; color:var(--gray); font-size:14.5px; margin-top:14px;}
+.footer-cols{display:flex; gap:56px; flex-wrap:wrap;}
+.footer-col h4{font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy-soft); margin-bottom:16px;}
+.footer-col ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
+.footer-col a{font-size:14.5px; color:var(--gray);}
+.footer-col a:hover{color:var(--navy);}
+.footer-disclaimer{
+  font-size:12.5px; line-height:1.7; color:var(--gray); border-top:1px solid var(--line);
+  padding-top:28px; max-width:920px;
+}
+.footer-bottom{
+  display:flex; justify-content:space-between; margin-top:28px; font-size:13px; color:var(--gray);
+  flex-wrap:wrap; gap:12px;
+}
+
+/* ===== Palette switcher ===== */
+body, header, section, .btn, .service-card, .testi-card, .about-shape,
+.icon-wrap, .consult, footer, .field input, .field select, .faq-q, .process-step,
+.trust-bar{
+  transition:background-color .45s, color .45s, border-color .45s;
+}
+
+/* ===== AI chat bubble ===== */
+.ai-chat{
+  position:fixed; right:22px; bottom:92px; z-index:210;
+  font-family:var(--sans);
+}
+.ai-chat-panel{
+  position:absolute; right:0; bottom:78px;
+  width:320px; max-width:calc(100vw - 44px);
+  background:var(--white); border:1px solid var(--line);
+  border-radius:18px; overflow:hidden;
+  box-shadow:0 22px 60px -22px rgba(15,43,60,0.45);
+  transform:translateY(12px) scale(.96);
+  opacity:0; pointer-events:none;
+  transition:opacity .25s, transform .25s;
+}
+.ai-chat.open .ai-chat-panel{
+  opacity:1; pointer-events:auto;
+  transform:translateY(0) scale(1);
+}
+.ai-chat-head{
+  background:linear-gradient(135deg, var(--navy), var(--teal));
+  color:var(--white); padding:18px;
+}
+.ai-chat-status{
+  display:flex; align-items:center; gap:8px;
+  font-size:12px; font-family:var(--mono);
+  color:rgba(255,255,255,0.8); margin-bottom:8px;
+}
+.ai-chat-status::before{
+  content:''; width:8px; height:8px; border-radius:50%;
+  background:var(--mint); box-shadow:0 0 0 4px rgba(184,218,206,0.22);
+}
+.ai-chat-head h3{
+  color:var(--white); font-family:var(--serif);
+  font-size:24px; margin:0 0 6px;
+}
+.ai-chat-head p{font-size:13.5px; line-height:1.5; color:rgba(255,255,255,0.82);}
+.ai-chat-body{padding:18px; background:var(--bg);}
+.ai-message{
+  background:var(--white); border:1px solid var(--line);
+  border-radius:14px 14px 14px 4px;
+  padding:12px 14px; color:var(--navy-soft);
+  font-size:14px; line-height:1.55;
+}
+.ai-chat-actions{display:grid; gap:10px; margin-top:14px;}
+.ai-chat-actions a{
+  display:flex; justify-content:center; align-items:center;
+  min-height:42px; border-radius:999px;
+  background:var(--navy); color:var(--white);
+  font-size:13.5px; font-weight:700;
+}
+.ai-chat-actions a.secondary{
+  background:transparent; color:var(--navy);
+  border:1px solid var(--line);
+}
+.ai-chat-toggle{
+  display:flex; align-items:center; gap:12px;
+  background:var(--navy); color:var(--white);
+  border:none; border-radius:999px;
+  padding:12px 18px 12px 12px;
+  cursor:pointer;
+  box-shadow:0 14px 34px -14px rgba(15,43,60,0.55);
+  transition:transform .18s, background .25s, box-shadow .25s;
+}
+.ai-chat-toggle:hover{
+  background:var(--teal); transform:translateY(-2px);
+  box-shadow:0 18px 42px -16px rgba(15,43,60,0.5);
+}
+.ai-chat-icon{
+  width:42px; height:42px; border-radius:50%;
+  display:grid; place-items:center;
+  background:var(--mint); color:var(--navy);
+}
+.ai-chat-copy{display:flex; flex-direction:column; align-items:flex-start; line-height:1.2;}
+.ai-chat-copy strong{font-size:14px;}
+.ai-chat-copy span{font-size:12px; color:rgba(255,255,255,0.72);}
+@media (max-width:520px){
+  .ai-chat{right:14px; bottom:84px;}
+  .ai-chat-panel{bottom:72px; max-width:calc(100vw - 28px);}
+  .ai-chat-toggle{padding:10px;}
+  .ai-chat-copy{display:none;}
+}
+
+.palette-switcher{
+  position:fixed; bottom:22px; right:22px; z-index:200;
+  font-family:var(--sans);
+}
+.palette-toggle{
+  display:flex; align-items:center; gap:8px;
+  background:var(--navy); color:var(--white);
+  border:none; border-radius:999px; padding:12px 18px;
+  font-size:13.5px; font-weight:600; cursor:pointer;
+  box-shadow:0 12px 30px -10px rgba(0,0,0,0.35);
+  transition:background .3s, transform .15s;
+}
+.palette-toggle:hover{transform:translateY(-1px);}
+.palette-panel{
+  position:absolute; bottom:56px; right:0;
+  background:var(--white); border:1px solid var(--line);
+  border-radius:10px; padding:16px;
+  width:280px; max-height:70vh; overflow-y:auto;
+  box-shadow:0 20px 50px -15px rgba(0,0,0,0.3);
+  display:none;
+  flex-direction:column; gap:4px;
+}
+.palette-panel.open{display:flex;}
+.palette-panel h5{
+  font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--gray); margin-bottom:8px; font-weight:500;
+}
+.palette-option{
+  display:flex; align-items:center; gap:12px;
+  background:none; border:1px solid transparent; border-radius:6px;
+  padding:8px 10px; cursor:pointer; text-align:left; width:100%;
+}
+.palette-option:hover{background:var(--bg);}
+.palette-option.active{border-color:var(--navy); background:var(--bg);}
+.palette-dots{display:flex; flex-shrink:0;}
+.palette-dots span{
+  width:16px; height:16px; border-radius:50%;
+  border:1px solid rgba(0,0,0,0.08); margin-left:-6px;
+}
+.palette-dots span:first-child{margin-left:0;}
+.palette-option-name{font-size:13px; font-weight:600; color:var(--navy);}
+.palette-option-tag{font-size:11px; color:var(--gray); display:block;}
+@media (max-width:520px){
+  .palette-switcher{bottom:14px; right:14px;}
+  .palette-panel{width:calc(100vw - 28px); right:-14px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="logo">Meridian<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#process">How It Works</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#stories">Stories</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#consult" class="btn btn-nav-cta">Free consultation</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="wrap">
+      <div class="hero-content">
+        <span class="eyebrow">Financial guidance &amp; credit strategy</span>
+        <h1>A clearer path to financial confidence.</h1>
+        <p class="lede">You are not defined by your past financial mistakes. We help you understand exactly where you stand, build a real plan, and move forward — with people on your side, not people who judge.</p>
+        <div class="hero-cta-row">
+          <a href="#consult" class="btn">Get your free consultation</a>
+          <a href="#process" class="btn btn-outline">See how it works</a>
+        </div>
+        <p class="microcopy">No upfront fees before service · No judgment · A real person calls you back</p>
+      </div>
+    </div>
+    <div class="trust-bar">
+      <div class="wrap trust-row">
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Licensed &amp; compliant guidance</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="1"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Bank-level data security</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>No fees before service</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Real people, real plans</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="bg-pattern">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">The path</span>
+        <h2>Five stages, one direction: forward.</h2>
+        <p>Everyone who comes to us starts somewhere in the tangle. Here's the same path we walk with every client — from wherever your finances feel unclear today, to a plan you actually understand.</p>
+      </div>
+
+      <div class="process-svg-wrap reveal">
+        <svg viewBox="0 0 1000 160" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,90 C25,15 45,150 70,80 C95,20 115,145 140,85 C165,35 185,120 210,95
+                   C230,70 250,105 280,92 C310,80 335,100 365,93
+                   C400,88 430,96 460,93 C500,90 540,95 580,93
+                   C630,91 680,94 730,93 C780,92 830,93 880,92.5 C930,92 970,92.5 1000,92.5"
+                fill="none" stroke="var(--line)" stroke-width="14" stroke-linecap="round"/>
+          <path d="M0,90 C25,15 45,150 70,80 C95,20 115,145 140,85 C165,35 185,120 210,95
+                   C230,70 250,105 280,92 C310,80 335,100 365,93
+                   C400,88 430,96 460,93 C500,90 540,95 580,93
+                   C630,91 680,94 730,93 C780,92 830,93 880,92.5 C930,92 970,92.5 1000,92.5"
+                fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="var(--wine)"/>
+              <stop offset="50%" stop-color="var(--gold)"/>
+              <stop offset="100%" stop-color="var(--teal)"/>
+            </linearGradient>
+          </defs>
+          <circle cx="20" cy="72" r="6" fill="var(--wine)"/>
+          <circle cx="245" cy="80" r="6" fill="var(--gold)"/>
+          <circle cx="470" cy="92" r="6" fill="var(--gold)"/>
+          <circle cx="695" cy="93.5" r="6" fill="var(--mint-deep)"/>
+          <circle cx="960" cy="92.5" r="6" fill="var(--teal)"/>
+        </svg>
+      </div>
+
+      <div class="process-steps reveal">
+        <div class="process-step">
+          <span class="step-num">01 · Confusion</span>
+          <h3>Where you are</h3>
+          <p>Reports that don't make sense, debt that feels bigger than the numbers, and no clear idea what to do first.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-num">02 · Understanding</span>
+          <h3>Full picture</h3>
+          <p>We go through every account, inquiry, and mark on your credit report and explain what it actually means for you.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-num">03 · Strategy</span>
+          <h3>A real plan</h3>
+          <p>What to address first, what to leave alone, and a realistic timeline — specific to your situation, not a template.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-num">04 · Action</span>
+          <h3>Moving forward</h3>
+          <p>You take the next step with guidance at every turn, including licensed legal support when it's genuinely needed.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-num">05 · Confidence</span>
+          <h3>Where you're headed</h3>
+          <p>You understand your finances, you're already moving, and you're not figuring any of it out alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="alt-bg">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">What we do</span>
+        <h2>Four kinds of support, one team.</h2>
+        <p>Not a one-time fix and not a single product — an integrated service built around your actual situation.</p>
+      </div>
+
+      <div class="services-grid reveal">
+        <div class="service-card">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M7.8 3h8.4L21 7.8v8.4L16.2 21H7.8L3 16.2V7.8L7.8 3z"/></svg></div>
+          <h3>Credit report analysis</h3>
+          <p>We read what the bureaus won't explain in plain language — every account, every inquiry, every mark — and tell you exactly what it means and what's worth acting on.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20V10M18 20V4M6 20v-6"/></svg></div>
+          <h3>Financial coaching</h3>
+          <p>Ongoing, personalized coaching to build a budget and habits that actually fit your income and your life, not a generic spreadsheet.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg></div>
+          <h3>Legal guidance &amp; support</h3>
+          <p>When a credit or debt issue genuinely calls for legal action, you're connected with qualified, independent attorneys who take it from there.</p>
+          <div class="service-note">Legal services are provided by independent, licensed attorneys where applicable.</div>
+        </div>
+        <div class="service-card">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3M8 4v4H4M16 20v-4h4"/></svg></div>
+          <h3>Ongoing accompaniment</h3>
+          <p>We check in, adjust the plan as your situation changes, and stay with you well past the first conversation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-pattern">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-shape reveal">
+          <svg viewBox="0 0 200 200" fill="none">
+            <rect x="35" y="35" width="130" height="130" rx="10" stroke="var(--navy)" stroke-width="2" opacity="0.3"/>
+            <circle cx="100" cy="100" r="46" stroke="var(--navy)" stroke-width="2" opacity="0.5"/>
+            <path d="M75,100 L92,117 L128,80" stroke="var(--teal)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Why Meridian</span>
+          <h2>We've sat across from people who felt exactly like you do right now.</h2>
+          <p>Meridian was built around a simple idea: most people don't need to be sold a fix, they need someone to sit down, explain what's actually happening, and help them make one good decision at a time.</p>
+          <p>Our team includes credit specialists, financial coaches, and a network of independent licensed attorneys — so whatever your situation calls for, you're not being handed off to a stranger or a script.</p>
+          <div class="about-stats">
+            <div><div class="n">10+ yrs</div><div class="l">Guiding clients through credit &amp; debt</div></div>
+            <div><div class="n">1:1</div><div class="l">Personal coaching, not a call center</div></div>
+            <div><div class="n">0</div><div class="l">Upfront fees before service begins</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="stories" class="alt-bg">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">In their words</span>
+        <h2>People who started exactly where you are.</h2>
+      </div>
+      <div class="testi-grid reveal">
+        <div class="testi-card">
+          <p>"I'd avoided looking at my credit report for three years. The first call, nobody made me feel small about it — we just started."</p>
+          <div class="testi-person">
+            <div class="testi-avatar">DR</div>
+            <div><div class="testi-name">Denise R.</div><div class="testi-loc">Columbus, OH</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p>"They explained why two accounts mattered and told me to leave the rest alone. That single piece of advice saved me months."</p>
+          <div class="testi-person">
+            <div class="testi-avatar">MT</div>
+            <div><div class="testi-name">Marcus T.</div><div class="testi-loc">Tampa, FL</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p>"We were able to buy our first home eighteen months after our first call. I still check in with my coach every quarter."</p>
+          <div class="testi-person">
+            <div class="testi-avatar">PK</div>
+            <div><div class="testi-name">Priya &amp; Sam K.</div><div class="testi-loc">Denver, CO</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Questions</span>
+        <h2>Before you reach out</h2>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Will this hurt my credit further?<span class="plus">+</span></button>
+          <div class="faq-a"><p>No. The first step is understanding your reports — we don't take any action on your accounts until you understand and agree to a plan.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How long does the process take?<span class="plus">+</span></button>
+          <div class="faq-a"><p>It depends on your starting point. Most clients see their first clear plan within two weeks, with ongoing coaching for as long as it's useful to you.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is legal help included automatically?<span class="plus">+</span></button>
+          <div class="faq-a"><p>No — legal support only comes into play when your situation genuinely calls for it, and it's always handled by independent, licensed attorneys.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What does it cost?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Your first consultation is free. Any ongoing service and its cost is explained clearly before you agree to anything, with no fees collected before service is provided.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do you work with people who have no credit at all?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Yes. Building credit from scratch is a different plan than repairing existing credit, but it's a path we guide people through often.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULTATION -->
+  <section id="consult" class="consult">
+    <div class="wrap">
+      <div class="consult-grid">
+        <div class="consult-copy reveal">
+          <span class="eyebrow">Get started</span>
+          <h2>Your first conversation is free — and it's just a conversation.</h2>
+          <p style="color:rgba(233,238,243,0.8); max-width:420px;">Tell us a little about your situation. A real person on our team will call you back, usually within one business day, to talk through what's actually going on and what a next step could look like.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>No pressure, no obligation to continue</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Your information stays private and secure</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>You'll speak with a person, not a script</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <form class="consult-form" id="consultForm" novalidate>
+            <div class="field">
+              <label for="fname">Full name</label>
+              <input type="text" id="fname" name="fname" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="fphone">Phone number</label>
+              <input type="tel" id="fphone" name="fphone" required autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" name="femail" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="fgoal">What's your main goal right now?</label>
+              <select id="fgoal" name="fgoal" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>Buy a home</option>
+                <option>Improve my credit score</option>
+                <option>Manage or reduce debt</option>
+                <option>Understand my credit report</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <button type="submit" class="btn">Request my free consultation</button>
+            <p class="form-note">By submitting, you agree to be contacted by Meridian about your request. No fees are charged for this consultation.</p>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <h3>Thank you — we've got your request.</h3>
+            <p>A member of our team will call you, usually within one business day. In the meantime, feel free to explore how the process works above.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo">Meridian<span>.</span></a>
+        <p>Financial guidance, credit strategy, and legal support for people who want a clearer path forward — not another lecture about their past.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#stories">Client stories</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Credit analysis</a></li>
+            <li><a href="#services">Financial coaching</a></li>
+            <li><a href="#services">Legal support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Client disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p><strong>Disclosure:</strong> Meridian provides financial education, coaching, and credit guidance services. Legal services referenced on this site are provided by independent, licensed attorneys and are not provided directly by Meridian. Results vary based on individual circumstances and are not guaranteed. This is placeholder disclosure copy — final legal, licensing, and compliance language (including any disclosures required under state credit-services regulations or the Credit Repair Organizations Act) should be reviewed and approved by qualified legal counsel before this site goes live.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Meridian Financial Guidance. All rights reserved.</span>
+      <span>Made for people rebuilding, not people being judged.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="ai-chat" id="aiChat">
+  <div class="ai-chat-panel" id="aiChatPanel" aria-hidden="true">
+    <div class="ai-chat-head">
+      <div class="ai-chat-status">AI assistant online</div>
+      <h3>Need a clearer next step?</h3>
+      <p>Tell us what feels confusing. Our assistant can help you prepare for a real conversation with the team.</p>
+    </div>
+    <div class="ai-chat-body">
+      <div class="ai-message">Hi — I can help you understand where to start with credit, debt, or your free consultation.</div>
+      <div class="ai-chat-actions">
+        <a href="#consult">Start free consultation</a>
+        <a href="#process" class="secondary">See how it works</a>
+      </div>
+    </div>
+  </div>
+  <button class="ai-chat-toggle" id="aiChatToggle" aria-expanded="false" aria-controls="aiChatPanel">
+    <span class="ai-chat-icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M21 12a8.5 8.5 0 0 1-8.5 8.5H6l-3 2 .9-4A8.5 8.5 0 1 1 21 12Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg>
+    </span>
+    <span class="ai-chat-copy">
+      <strong>Talk with us</strong>
+      <span>AI guide available</span>
+    </span>
+  </button>
+</div>
+
+<div class="palette-switcher" id="paletteSwitcher">
+  <div class="palette-panel" id="palettePanel">
+    <h5>Color palettes</h5>
+    <div id="paletteOptions"></div>
+  </div>
+  <button class="palette-toggle" id="paletteToggle" aria-expanded="false">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/><circle cx="8.5" cy="13" r="1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="13" r="1" fill="currentColor" stroke="none"/></svg>
+    Palettes
+  </button>
+</div>
+
+<script>
+const palettes = [
+  {id:'meridian', name:'Meridian Warmth', tag:'Teal + cream + gold — human, confident',
+   vars:{'--bg':'#F7F4EE','--bg-deep':'#EDE8DF','--navy':'#0F2B3C','--navy-soft':'#3A5A6A','--mint':'#B8DACE','--mint-deep':'#9CC8BA','--teal':'#1A8A7A','--wine':'#C4555A','--gold':'#E2A84A','--gray':'#6B6A66','--line':'rgba(15,43,60,0.12)'}},
+  {id:'heritage', name:'Heritage Gold', tag:'Dark navy + gold — traditional bank',
+   vars:{'--bg':'#F5F0EA','--bg-deep':'#EDE4DA','--navy':'#1A2A3C','--navy-soft':'#4A5E72','--mint':'#E8DCC8','--mint-deep':'#D4C4A8','--teal':'#2C6B5F','--wine':'#8B3A3A','--gold':'#C5943C','--gray':'#6B5E4F','--line':'rgba(26,42,60,0.14)'}},
+  {id:'institutional', name:'Institutional Blue', tag:'Deep blue — solid like a bank',
+   vars:{'--bg':'#EDF1F6','--bg-deep':'#DFE7F0','--navy':'#12314F','--navy-soft':'#3E5C78','--mint':'#C7D9E8','--mint-deep':'#AEC7DD','--teal':'#2E8B7A','--wine':'#B23A55','--gold':'#E0A030','--gray':'#64707D','--line':'rgba(18,49,79,0.15)'}},
+  {id:'blue-green-trust', name:'Blue Green Trust', tag:'Blue + sage green — close, secure, professional',
+   vars:{'--bg':'#F3F7F6','--bg-deep':'#E3EEEB','--navy':'#123A5A','--navy-soft':'#3F6378','--mint':'#C7E1D7','--mint-deep':'#9FCBB9','--teal':'#23836F','--wine':'#8F4A5A','--gold':'#8BBE7A','--gray':'#5F7070','--line':'rgba(18,58,90,0.14)'}},
+  {id:'forest', name:'Forest Green', tag:'Deep forest + cream — stable growth',
+   vars:{'--bg':'#EEF3EF','--bg-deep':'#E1EAE3','--navy':'#1F3B32','--navy-soft':'#4C6B60','--mint':'#C9DED1','--mint-deep':'#AACDBB','--teal':'#2E8B7A','--wine':'#B2455A','--gold':'#D9A441','--gray':'#6B7570','--line':'rgba(31,59,50,0.15)'}},
+  {id:'burgundy', name:'Burgundy Reserve', tag:'Burgundy + cream — premium, refined',
+   vars:{'--bg':'#F7F2EE','--bg-deep':'#EFE5DE','--navy':'#2C1F1E','--navy-soft':'#5A4543','--mint':'#E5D5CB','--mint-deep':'#D4C0B3','--teal':'#3D7268','--wine':'#7A2E3A','--gold':'#C49A45','--gray':'#6E5D56','--line':'rgba(44,31,30,0.14)'}},
+  {id:'slate', name:'Slate & Steel', tag:'Cool grays + blue — corporate, confident',
+   vars:{'--bg':'#F2F3F5','--bg-deep':'#E6E8ED','--navy':'#1E293B','--navy-soft':'#475569','--mint':'#CBD5E1','--mint-deep':'#B4C2D4','--teal':'#3B7A7A','--wine':'#9E3C54','--gold':'#C9943E','--gray':'#626C78','--line':'rgba(30,41,59,0.14)'}},
+  {id:'ocean', name:'Ocean Depth', tag:'Teal + sand — calm, grounded',
+   vars:{'--bg':'#EDF4F2','--bg-deep':'#DEEAE6','--navy':'#153E4F','--navy-soft':'#3D6878','--mint':'#C2DDD4','--mint-deep':'#A8CCC1','--teal':'#1F7A6E','--wine':'#A64D5A','--gold':'#D6A644','--gray':'#5F7572','--line':'rgba(21,62,79,0.14)'}},
+  {id:'charcoal', name:'Charcoal & Amber', tag:'Charcoal + amber — modern fintech',
+   vars:{'--bg':'#F2F0EE','--bg-deep':'#E6E2DE','--navy':'#1F242B','--navy-soft':'#4B515A','--mint':'#D6D1C8','--mint-deep':'#C0B9AD','--teal':'#4A7C6E','--wine':'#9E404A','--gold':'#D4903C','--gray':'#67645E','--line':'rgba(31,36,43,0.14)'}},
+  {id:'pearl', name:'Pearl & Navy', tag:'Pearl white + navy — crisp, clean',
+   vars:{'--bg':'#F5F6F8','--bg-deep':'#E9EBF0','--navy':'#0A1A2B','--navy-soft':'#3A4A5E','--mint':'#D6DEE8','--mint-deep':'#BCC8D8','--teal':'#2E8B7A','--wine':'#B23A55','--gold':'#D9A842','--gray':'#5C6570','--line':'rgba(10,26,43,0.14)'}},
+  {id:'taupe', name:'Taupe & Sage', tag:'Taupe + sage — calm, organic trust',
+   vars:{'--bg':'#F3F0EB','--bg-deep':'#E8E3DA','--navy':'#2E3329','--navy-soft':'#595E50','--mint':'#D5D6C8','--mint-deep':'#C0C2B0','--teal':'#4A7A68','--wine':'#95524D','--gold':'#BD9845','--gray':'#6B6B60','--line':'rgba(46,51,41,0.14)'}},
+  {id:'indigo', name:'Indigo Trust', tag:'Indigo + warm gray — principled, strong',
+   vars:{'--bg':'#F0EFF5','--bg-deep':'#E3E0EC','--navy':'#1C1F3B','--navy-soft':'#484A68','--mint':'#CDCADB','--mint-deep':'#B8B3CC','--teal':'#3A6B7A','--wine':'#8A3E5A','--gold':'#C99442','--gray':'#626075','--line':'rgba(28,31,59,0.14)'}},
+  {id:'midnight', name:'Midnight & Gold', tag:'Midnight blue + gold — premium private bank',
+   vars:{'--bg':'#F0EEE8','--bg-deep':'#E4E0D6','--navy':'#0C1A2A','--navy-soft':'#3B4C5E','--mint':'#DDD8CB','--mint-deep':'#CAC3B2','--teal':'#2C7468','--wine':'#7A3A48','--gold':'#CD9A3E','--gray':'#5C605E','--line':'rgba(12,26,42,0.14)'}},
+  {id:'warm', name:'Warm Approachable', tag:'Sand + terracotta — human, accessible',
+   vars:{'--bg':'#F6F1E7','--bg-deep':'#EFE6D3','--navy':'#3E3229','--navy-soft':'#6B5B49','--mint':'#E3C9A6','--mint-deep':'#D3B588','--teal':'#4F7F6F','--wine':'#A24E52','--gold':'#C98A34','--gray':'#7A6F63','--line':'rgba(62,50,41,0.16)'}},
+  {id:'neutral', name:'Elegant Neutral', tag:'Warm grays — minimal, sophisticated',
+   vars:{'--bg':'#F2F1EE','--bg-deep':'#E6E3DC','--navy':'#2B2B28','--navy-soft':'#57534A','--mint':'#D9D3C7','--mint-deep':'#C7BFAF','--teal':'#3E7C6E','--wine':'#9C4A4A','--gold':'#B98A3E','--gray':'#6E6A63','--line':'rgba(43,43,40,0.15)'}},
+  {id:'ivory', name:'Ivory & Bronze', tag:'Ivory + bronze — warm, timeless',
+   vars:{'--bg':'#F8F4ED','--bg-deep':'#EFE9DD','--navy':'#2A2824','--navy-soft':'#59544C','--mint':'#E0D7C7','--mint-deep':'#CDC0AB','--teal':'#3B7566','--wine':'#8E484E','--gold':'#C49040','--gray':'#6E6559','--line':'rgba(42,40,36,0.14)'}},
+  {id:'cobalt', name:'Cobalt Reserve', tag:'Cobalt + cream — bold, secure',
+   vars:{'--bg':'#F0F2F7','--bg-deep':'#E2E6F0','--navy':'#142642','--navy-soft':'#3E5270','--mint':'#C7D2E0','--mint-deep':'#B0BFD3','--teal':'#2E7A7A','--wine':'#A84252','--gold':'#D4A23C','--gray':'#606A78','--line':'rgba(20,38,66,0.14)'}},
+];
+
+function applyPalette(p){
+  const root = document.documentElement;
+  Object.entries(p.vars).forEach(([k,v]) => root.style.setProperty(k, v));
+  document.querySelectorAll('.palette-option').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.id === p.id);
+  });
+}
+
+const paletteOptionsEl = document.getElementById('paletteOptions');
+palettes.forEach((p, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'palette-option' + (i === 0 ? ' active' : '');
+  btn.dataset.id = p.id;
+  btn.innerHTML = `<span class="palette-dots"><span style="background:${p.vars['--navy']}"></span><span style="background:${p.vars['--mint']}"></span><span style="background:${p.vars['--gold']}"></span></span><span><span class="palette-option-name">${p.name}</span><span class="palette-option-tag">${p.tag}</span></span>`;
+  btn.addEventListener('click', () => applyPalette(p));
+  paletteOptionsEl.appendChild(btn);
+});
+
+const paletteToggle = document.getElementById('paletteToggle');
+const palettePanel = document.getElementById('palettePanel');
+paletteToggle.addEventListener('click', () => {
+  const isOpen = palettePanel.classList.toggle('open');
+  paletteToggle.setAttribute('aria-expanded', isOpen);
+});
+document.addEventListener('click', (e) => {
+  if (!document.getElementById('paletteSwitcher').contains(e.target)) {
+    palettePanel.classList.remove('open');
+    paletteToggle.setAttribute('aria-expanded', 'false');
+  }
+});
+
+// AI chat bubble
+const aiChat = document.getElementById('aiChat');
+const aiChatToggle = document.getElementById('aiChatToggle');
+const aiChatPanel = document.getElementById('aiChatPanel');
+aiChatToggle.addEventListener('click', () => {
+  const isOpen = aiChat.classList.toggle('open');
+  aiChatToggle.setAttribute('aria-expanded', String(isOpen));
+  aiChatPanel.setAttribute('aria-hidden', String(!isOpen));
+});
+aiChat.querySelectorAll('.ai-chat-actions a').forEach(link => {
+  link.addEventListener('click', () => {
+    aiChat.classList.remove('open');
+    aiChatToggle.setAttribute('aria-expanded', 'false');
+    aiChatPanel.setAttribute('aria-hidden', 'true');
+  });
+});
+
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen);
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}));
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-q');
+  const ans = item.querySelector('.faq-a');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(other => {
+      if (other !== item) {
+        other.classList.remove('open');
+        other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      }
+    });
+    item.classList.toggle('open', !isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    ans.style.maxHeight = !isOpen ? ans.scrollHeight + 'px' : null;
+  });
+});
+
+// Form submit (demo)
+const form = document.getElementById('consultForm');
+const success = document.getElementById('formSuccess');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  form.style.display = 'none';
+  success.classList.add('show');
+});
+</script>
+
+</body>
+</html>
